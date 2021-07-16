@@ -1,0 +1,879 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20182.20.1204.1430                               -->
+<workbook original-version='18.1' source-build='2018.2.29 (20182.20.1204.1430)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='MotoCad' inline='true' name='federated.0j2j7qu0lel4tp15t7rmg1ij6du8' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='MotoCad' name='textscan.0cs9sj11slv02s17tk7ms0w2iptf'>
+            <connection class='textscan' directory='D:/Prohibited/Dhaval Documents/Business_Analytics/Assignment/Tableau/22' filename='MotoCad.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0cs9sj11slv02s17tk7ms0w2iptf' name='MotoCad.csv' table='[MotoCad#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='Car Name' ordinal='0' />
+            <column datatype='real' name='mpg' ordinal='1' />
+            <column datatype='integer' name='cyl' ordinal='2' />
+            <column datatype='real' name='disp' ordinal='3' />
+            <column datatype='integer' name='hp' ordinal='4' />
+            <column datatype='real' name='drat' ordinal='5' />
+            <column datatype='real' name='wt' ordinal='6' />
+            <column datatype='real' name='qsec' ordinal='7' />
+            <column datatype='integer' name='vs' ordinal='8' />
+            <column datatype='integer' name='am' ordinal='9' />
+            <column datatype='integer' name='gear' ordinal='10' />
+            <column datatype='integer' name='carb' ordinal='11' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[MotoCad.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rs&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Car Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Car Name]</local-name>
+            <parent-name>[MotoCad.csv]</parent-name>
+            <remote-alias>Car Name</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mpg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[mpg]</local-name>
+            <parent-name>[MotoCad.csv]</parent-name>
+            <remote-alias>mpg</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cyl</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[cyl]</local-name>
+            <parent-name>[MotoCad.csv]</parent-name>
+            <remote-alias>cyl</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>disp</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[disp]</local-name>
+            <parent-name>[MotoCad.csv]</parent-name>
+            <remote-alias>disp</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hp</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[hp]</local-name>
+            <parent-name>[MotoCad.csv]</parent-name>
+            <remote-alias>hp</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drat</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[drat]</local-name>
+            <parent-name>[MotoCad.csv]</parent-name>
+            <remote-alias>drat</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wt</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[wt]</local-name>
+            <parent-name>[MotoCad.csv]</parent-name>
+            <remote-alias>wt</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>qsec</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[qsec]</local-name>
+            <parent-name>[MotoCad.csv]</parent-name>
+            <remote-alias>qsec</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>vs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[vs]</local-name>
+            <parent-name>[MotoCad.csv]</parent-name>
+            <remote-alias>vs</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>am</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[am]</local-name>
+            <parent-name>[MotoCad.csv]</parent-name>
+            <remote-alias>am</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gear</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[gear]</local-name>
+            <parent-name>[MotoCad.csv]</parent-name>
+            <remote-alias>gear</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>carb</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[carb]</local-name>
+            <parent-name>[MotoCad.csv]</parent-name>
+            <remote-alias>carb</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Carb (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[carb]' new-bin='true'>
+          <bin default-name='false' value='&quot;Heavy Cars&quot;'>
+            <value>4</value>
+            <value>6</value>
+            <value>8</value>
+          </bin>
+          <bin default-name='false' value='&quot;Light Cars&quot;'>
+            <value>1</value>
+            <value>2</value>
+            <value>3</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='Sum' caption='Am' datatype='integer' name='[am]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='0' value='Manual' />
+          <alias key='1' value='Automatic' />
+        </aliases>
+      </column>
+      <column aggregation='Sum' caption='Carb' datatype='integer' name='[carb]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Cyl' datatype='integer' name='[cyl]' role='dimension' type='ordinal' />
+      <column caption='Disp' datatype='real' name='[disp]' role='measure' type='quantitative' />
+      <column caption='Drat' datatype='real' name='[drat]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Gear' datatype='integer' name='[gear]' role='dimension' type='ordinal' />
+      <column caption='Hp' datatype='integer' name='[hp]' role='measure' type='quantitative' />
+      <column caption='Mpg' datatype='real' name='[mpg]' role='measure' type='quantitative' />
+      <column caption='Qsec' datatype='real' name='[qsec]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Vs' datatype='integer' name='[vs]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='0' value='Standard Engine' />
+          <alias key='1' value='VS Type engine' />
+        </aliases>
+      </column>
+      <column caption='Wt' datatype='real' name='[wt]' role='measure' type='quantitative' />
+      <drill-paths>
+        <drill-path name='Car Fuunctions'>
+          <field>[Carb (group)]</field>
+          <field>[carb]</field>
+          <field>[Car Name]</field>
+        </drill-path>
+      </drill-paths>
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='D:/Prohibited/Dhaval Documents/Business_Analytics/Tableau Desktop/Assignment_22.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='02/17/2021 07:02:37 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='32' timestamp-start='2021-02-17 19:02:37.917' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Car Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Car Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Car Name</remote-alias>
+              <ordinal>0</ordinal>
+              <family>MotoCad.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mpg</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[mpg]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>mpg</remote-alias>
+              <ordinal>1</ordinal>
+              <family>MotoCad.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cyl</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[cyl]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cyl</remote-alias>
+              <ordinal>2</ordinal>
+              <family>MotoCad.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>disp</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[disp]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>disp</remote-alias>
+              <ordinal>3</ordinal>
+              <family>MotoCad.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hp</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[hp]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>hp</remote-alias>
+              <ordinal>4</ordinal>
+              <family>MotoCad.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>drat</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[drat]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>drat</remote-alias>
+              <ordinal>5</ordinal>
+              <family>MotoCad.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>wt</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[wt]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>wt</remote-alias>
+              <ordinal>6</ordinal>
+              <family>MotoCad.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>qsec</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[qsec]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>qsec</remote-alias>
+              <ordinal>7</ordinal>
+              <family>MotoCad.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>vs</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[vs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>vs</remote-alias>
+              <ordinal>8</ordinal>
+              <family>MotoCad.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>am</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[am]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>am</remote-alias>
+              <ordinal>9</ordinal>
+              <family>MotoCad.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gear</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[gear]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gear</remote-alias>
+              <ordinal>10</ordinal>
+              <family>MotoCad.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>carb</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[carb]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>carb</remote-alias>
+              <ordinal>11</ordinal>
+              <family>MotoCad.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.480167' measure-ordering='alphabetic' measure-percentage='0.519833' show-aliased-fields='true' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Aliases'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='MotoCad' name='federated.0j2j7qu0lel4tp15t7rmg1ij6du8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0j2j7qu0lel4tp15t7rmg1ij6du8'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column aggregation='Sum' caption='Am' datatype='integer' name='[am]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Manual' />
+                <alias key='1' value='Automatic' />
+              </aliases>
+            </column>
+            <column-instance column='[am]' derivation='None' name='[none:am:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[vs]' derivation='None' name='[none:vs:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Vs' datatype='integer' name='[vs]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Standard Engine' />
+                <alias key='1' value='VS Type engine' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0j2j7qu0lel4tp15t7rmg1ij6du8].[none:vs:ok]' value='181' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0j2j7qu0lel4tp15t7rmg1ij6du8].[sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0j2j7qu0lel4tp15t7rmg1ij6du8].[none:am:ok]</rows>
+        <cols>[federated.0j2j7qu0lel4tp15t7rmg1ij6du8].[none:vs:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Group'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='MotoCad' name='federated.0j2j7qu0lel4tp15t7rmg1ij6du8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0j2j7qu0lel4tp15t7rmg1ij6du8'>
+            <column datatype='string' name='[Carb (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[carb]' new-bin='true'>
+                <bin default-name='false' value='&quot;Heavy Cars&quot;'>
+                  <value>4</value>
+                  <value>6</value>
+                  <value>8</value>
+                </bin>
+                <bin default-name='false' value='&quot;Light Cars&quot;'>
+                  <value>1</value>
+                  <value>2</value>
+                  <value>3</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column aggregation='Sum' caption='Carb' datatype='integer' name='[carb]' role='dimension' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0j2j7qu0lel4tp15t7rmg1ij6du8].[sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0j2j7qu0lel4tp15t7rmg1ij6du8].[Carb (group)]</rows>
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Hierarchy'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='MotoCad' name='federated.0j2j7qu0lel4tp15t7rmg1ij6du8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0j2j7qu0lel4tp15t7rmg1ij6du8'>
+            <column datatype='string' name='[Carb (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[carb]' new-bin='true'>
+                <bin default-name='false' value='&quot;Heavy Cars&quot;'>
+                  <value>4</value>
+                  <value>6</value>
+                  <value>8</value>
+                </bin>
+                <bin default-name='false' value='&quot;Light Cars&quot;'>
+                  <value>1</value>
+                  <value>2</value>
+                  <value>3</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column aggregation='Sum' caption='Am' datatype='integer' name='[am]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Manual' />
+                <alias key='1' value='Automatic' />
+              </aliases>
+            </column>
+            <column aggregation='Sum' caption='Carb' datatype='integer' name='[carb]' role='dimension' type='ordinal' />
+            <column-instance column='[am]' derivation='None' name='[none:am:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0j2j7qu0lel4tp15t7rmg1ij6du8].[sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0j2j7qu0lel4tp15t7rmg1ij6du8].[none:am:ok]</rows>
+        <cols>[federated.0j2j7qu0lel4tp15t7rmg1ij6du8].[Carb (group)]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' maximized='true' name='Aliases'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Group'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0j2j7qu0lel4tp15t7rmg1ij6du8].[Carb (group)]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Hierarchy'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0j2j7qu0lel4tp15t7rmg1ij6du8].[Carb (group)]</field>
+            <field>[federated.0j2j7qu0lel4tp15t7rmg1ij6du8].[none:am:ok]</field>
+            <field>[federated.0j2j7qu0lel4tp15t7rmg1ij6du8].[none:vs:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='74' name='Aliases' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAABKCAYAAADt91u5AAAACXBIWXMAABYlAAAWJQFJUiTw
+      AAANnUlEQVR4nO2cfVBUV5qHn9m6Vf1Hs8GKBimMrtvrusSyGLVbaQEbW5uJJGRCHGGNowiu
+      y2yIqxsyOpRRKUhCWJOQiTo6MilQk0FX2ZFx/CBjS0Mj2GCPMCwbWYdBQkZGUWvBolN21d3q
+      /aMbaJsGP/oqg32eqq6izz3n3Pc253fPe957z/sdl8vlQiAIUv5qrA0QCMYSIQBBUCMEIAhq
+      hAAEQY0QgCCoEQIQBDVCAIKgRghAENQIAQiCGiEAQVAjBCAIUjooTtUJAQiUQb7VyKEtq3kx
+      Xo9Op0Onj+fFH6ynsLyZ607vmmZydDp0qcV0jJWxXkhjbYDgKaD7BNlp+dT3epXJDm5/3Ux5
+      4Xp6J9gpNI2ZdaMiBCAIGFtJEfW9IUStK+DdtQuYopbA2cfXl+v4sqyEa2Nt4Ch8R7wOLQgU
+      c46OHLOebdV7SA4ZuV5HcSqpxf4cHw2ZR4+SqQHZ0c6Xn33K4ROXaOtzAhLqKQv44Ts7WLdg
+      0uAd290XZJbtJaZlN4X7zLT1OZHUM0gu+Dk5sRPuOUPvpUMUFB2krq0Pp6RmymwtE7utYg0g
+      CJywsDDAxp53Pqf1lhxQX12/3Eru5xc8gx9AxnGtnuKsLEqGaaeLgxlJpBeeGqwvO9opfzuX
+      3/QP1eo157AicxdVbX043ZW41mylpQdwCQSB8r8nXBtjtC6tVuvSaqNdhn/c4PrpsSbXn+/6
+      q3zW9ROt1qVN2e/6o5+jX5/a7dp/qsnV2etpfPfPrrqPX3dFa7WuxI9/P1jvj/tTXFpttOvF
+      tR+4DtVfdvXedblcd6+6StdFu7TaRNdQ1f92ffqK1qXVLnX98/66QZvu9ta43k/UusQMIAic
+      Ca/w8a8/Zs3sSUjIONov8HnhepKWrKCw5hYPMydMe2kDmS/N4W9CVe4CVTgxG9OIA3p6enxr
+      s3xHDmsWRhKqAlTTMURPA3oYrNpSSWU3SLGbKMqMIXyg29DnmRQiFsEChZAmxbPpQDz/0tdG
+      3X+UUXbiHM3XOyl/eyXynkq26R9wqMm3aCzbya5fNtB+2/FQ4vFLTw89gN5oxN/yRMwAAkVR
+      hUayJDOfz07WUJGjJ4ReTlZUP+BA7qXi35LIOuTkxX8v45zNjt1ux24vJNAoakiI/9W5EIAg
+      QGScTn/DW+L5FcnoAbmjg64H6arnNCdsMprUTayZMwW1Ev6JJCEBLZcu+RWhEIAgQLo4mLGU
+      lVuKqWq7jcMzymTHNer3lmEDQqKi0AzWn8a0aUCHmfJGz/rA6XC36++nH+iqruQrJ55oTTmF
+      6R9R/ajm6aKJlqDnV/kUnrvujgI5r9NcXoalR6wBBEogO2ivKmZLVfHwY6pZbFyl9yrQMG/e
+      BEq6OjiatYyjnjL3c4A44iKKOXSlhLTYksEW0qRJhAC9PAIhifxT6i+oK/sTFT9JomKoVyRJ
+      zACCgNGwrvQIeWsWEhkWiifIgqSeSOSSjez9dQlpGu/6EvqcA7z3sidyA6hCJxIiAcwia+97
+      vDxDjQRI6inEpBVRfvLH6B7ZPomo7EMUD0aAJNQzXiavvIR108STYEGQI2YAQVAjBCAIau67
+      CLbb7U/CDoFgTBBrAEFQI1wgQVAjBCAIaoQABEGNEIAgqBECeBDMOeh0uhG28wnGM4EJwDMw
+      3GkwcjCP8M5rS9FLQ/VyzAGdUiBQEuVmANlGXYM/BXxFdbXvTh6B4C8DRQSgWbUKPf1YLH4e
+      mnWc53w36LdtC3hTg0CgNMrMACEmTHror6+nxedQj81GB3pMJn87cpxcrz/EjvWvEq/3uEix
+      S1mde4rOe7KJudPY6VKLuXKrlfLc1SyN1aHT6YlfWUid93uyHrfM19PqKE4dVi472jn16b+y
+      emmsx0XTE//qRoobH24fq2D8opALFEJMTBT0VFP9lXd5D2ZzC0TFEON3R1otP924i9PN1wY3
+      UuDso+1ULum5Zvp9q3cdJCMpncJTbbizYMg42st5O/c3w+s+AA+XgkPwNKLYGiDMZCKKbs6f
+      9xo5/fXUt0CUyUSY31YTeGHFJnZ/8SU1Njt2u42aIznEToB+cwXmYaP6r/n75E3s/uIcdXY7
+      deUb+K4E8h/+8Eh5JqXnDWTmf8Z/nqtz7z2tO8muVTOR6KCiwncuEzyNKLcIDjNhioKO8+fp
+      9hT1WyzYmcXixf6HP+hYm7OGhZETPfs/JdQzVvDmcp/UFgNMW86OnDUsjHRvvFBNN+DOguHe
+      +f+wPFwKDsHTiIJbIsNYvHgWRbuqqe5JY1WYjK2uAXlWFqaIkVs5O0/xyXslnL38NX33+P2a
+      kZooh9IpOATjDkUfhEXExaGhhfr6fsCOzSajiYtjpPEvtxSRsuJdWjRv8rPTHjfEbudo5hMY
+      /I8xBYdg/KDsk2CNCZMGbGYz/TYz5n4NJtPIg9l+4gTdLGbd1iVEDrghT4rHkYJDMO5Q+FUI
+      DXFxEWC3UWytpz8ijrhRbub9/e6ZwlzpDjs6+9qoKt7CloOBh2C+qrdyS3an52g+Xcye0z6Z
+      aR5HCg7BuEPx+96sxYsJO3SUo7+SCUtdzKxR6upjY5HMdZi3LcO8baBUxaRJIeAcpeFoREQQ
+      AXSfyGbZiaFiSfK51MeRgkMw7lD+ZbgoE6YwGVkOw2SKGrVqyCt57B1MV6EiNPJlcj4/xd7l
+      I0WNHoBZWXyU7Z0CYwmZO8spWTfNt+JjSMEhGG+ILZGCoEa8Di0IaoQABEGNEIAgqBECEAQ1
+      9w2Dfvvtt0/CDoFgTBAzgCCoEQIQBDVCAIKgRghAENQIATwhLLkGDAYDuZaxtkTgjWICaN39
+      AwwG9z85dV9bwP1dLU0bXwPmailpBgOGcWOwABQTQBu1tTdBpUYtwfULF7iqTMdPDcY8K1ar
+      lTzjWFsi8EYZAVy9wIXrEL78E/KXqaHzArbrivQsEDxWFBHA1WoLnTzHokWRzDUYUA/MCL71
+      StMwGNIo9Zke3P7xQLmFXIOBtaWdXsc8H2/3Qr7N7w5vJz1xiftYQgobiirpcvrrOxfz7d9x
+      eHs6iUsMGAwJpGw+RrvspKtmH5tXJrLE08fmY+337A123mjg8PsbWDlwHkMCSesLqPQ6kSXX
+      gGFtKZ3uL0P2GnKx3GPH8GvH2UVlwXqSEtxtEpLWs/1wM30P+uMLAkIBAdzEfrET1NHoZ4Ok
+      07NAglZLNcMloBR9WN5N5619NXQMJBRy3qClooD0N0ppH7a7vZaClLfYV9PhyT/k5EbDbt56
+      bQWrtx+moduzId55g4bdRRz3Mrx+72b2fdlC91DiIu5cqaTgRwVYHIFehoX8lekUVF7hjkdP
+      zjtXqNl3nEsBdi14MAIXwM1qLK2gNhqZDyAtQK+ToNVGwyMNECN5VisHM6a7v3l8Z6vVitXj
+      QMu2vey09CFNjCP7wBmqrFbOHvuQ1yNVyO2l7Dzm63+p+bukbPYcOUOVtYrjH7xEONBHOMnZ
+      ezh21oq16jhbF6mBNi57reEnzEwm66PPqDhThdVqperMAbL1oeCwcNKjAGOeFevBDKa7vwzZ
+      a81jZJdf5uL+Isy3ZULnZPDhsbOe/o+wJ3sx4Y/y0wkemoAF4Giw0Yoag2Gup2Tg74tYAr5F
+      +ufCb8/i4Dleyc0nWePe0aWaHM0bH77JXKDt7G/55p4W81iVnUxUhBoJiYmx0bwAMG8V2clR
+      TFYB0kT+YcZzgMz/ec0gc3+YzcoFM3nWs2teUmtIznyVqcDNm4HkDmrCYukDdSLvFGUQPVnl
+      6T+CqGSj2z7BYyfAPcEOLJaLIBndd30PaqOR+Tsv0nSxETnJqPDG42+42ikDs5kzx6fn0O8y
+      Zzo0dXbSCUxV4nTOLip/tpMvqv6Hrjv3LjCmB9LvN5dpcwBGPXqRkWLMCOynd1ixNgGyhdwl
+      FnJ9j9dWUysbMY7Xf7Dcyu41WRwP+T65RQXoZz6DCtwx/7WlY22dQAECcoHkRhv20dKpyY3Y
+      Rq3wKEzlb6dLQCvNzT599/2e5k5g+vTA7s4DNJ3m9HVYtObHxA8MfqWY+gKRaqDRhk2kpBsz
+      AhCATG11LTLhvF7stVD1fKp2JqLGgdXa5NPuT9jru3Dijng0HimizE/IY+pUtwPTeLLcE9qU
+      cTjcLsjC7yWg5ibHt2+losMdwXHeaGD3W7toAiITvqeM+9PvwAFcqjZzWwacd7hSU8r27WXu
+      kOe9BrvP2XiSck+IVHY4RsnuMhejMRQcZ3g/u5SGGwNtummpsHBZCfsF9+XRnRPZjq1RhnAj
+      xkg/HetNGNVnONlgo5X5zAbCwsOR6OS/9q8mYf+QCb4pewCk2XOYLdXSenEXqxN2uQuNeVjz
+      jEj6LLYY68m12ChKT6TIu92MDLakKBRDWaBHL1mwWfJ5zZI/WKyaOBG179CWZjNntkRt60V2
+      rU7AbbGRvBEjQRLzf5SN6cK7mJtL2Zzi7VIZyRML4SfCI88Ast2C1QHhRiN+xj8wH6NRPRgm
+      BVAnvkNBssaThlDF5Khksn9+jK2L/DQPT+GDogyiI9xRHiQ1zz4z4ISEYtx+gE/eiEczkNNQ
+      NZmo5K0c2JfBDKXWHD4RGtUzM1mW/QvKi77Pc8MNJuWDIjKiI4YyXT97H7cp1MiOIwfYumwm
+      A5ememYm8W+8xjyFLkEwOvfNCyS2RAqeZsTr0IKg5v8B8V3YQI5BDDoAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='74' name='Group' width='164'>
+      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
+    </thumbnail>
+    <thumbnail height='94' name='Hierarchy' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
